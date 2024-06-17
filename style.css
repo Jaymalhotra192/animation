@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+    background-color: #fff;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.discovery-product {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px 30px 60px;
+    max-width: 460px;
+    border: solid 1px #E7E7E9;
+    position: relative;
+}
+
+.search-area {
+    border:solid 1px #000;
+    padding: 7px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 4px 16px 0px #0000001A;
+}
+
+.search-area p {
+    margin: 0;
+    padding: 0;
+    color: #292933;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.mic-icon {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.discovery-product:hover .discovery-scroll {
+    opacity: 1;
+}
+
+.discovery-product:hover .without-hover {
+    opacity: 0;
+    z-index: -9;
+}
+
+.discovery-scroll {
+    max-height: 390px;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: 0.7s;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    margin-top: 20px;
+}
+
+.discovery-scroll::-webkit-scrollbar {
+    display: none; 
+}
+
+.discovery-scroll ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.discovery-scroll ul li {
+    line-height: 0.8;
+}
+
+.discovery-scroll li span {
+    display: block;
+    background: #E7E7E9;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 6px;
+}
+
+.discovery-scroll li span:last-of-type {
+    background: #F5F5F6;
+}
+
+.discovery-product .without-hover {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 260px;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+.discovery-footer {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    border-top: solid 1px #E7E7E9;
+    background-color: #fff;
+    display: flex;
+    gap: 12px;
+    z-index: 99;
+    font-weight: 600;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn {
+    width: 100%;
+    max-width: 40px;
+    height: 18px;
+    background-color: #f5f5f6;
+    border:solid 1px #b7b7bc;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.7s;
+}
+
+.toggle-btn:before {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #b7b7bc;
+    border-radius: 50%;
+}
+
+.discovery-product:hover .toggle-btn {
+    background-color: #ecffee;
+    border:solid 1px #119822;
+}
+
+.discovery-product:hover .toggle-btn:before {
+    background-color: #119822;
+    right: 2px;
+    left: auto;
+}
+
+.discovery-scroll img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.jewelery-expert {
+    padding: 30px 16px 30px;
+}
+
+.jewelery-expert-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #161618;
+    display: flex;
+    padding: 12px 15px;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+
+.jewelery-expert-image {
+    line-height: 0.5;
+}
+
+.jewelery-expert-image img {
+    max-width: 36px;
+}
+
+.jewelery-expert-header p {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.jewelery-expert .without-hover {
+    max-width: 100%;
+    width:calc(100% - 32px);
+    height: calc(100% - 160px);
+}
+
+.jewellery-right-msg {
+    background-color: #C2C7F3;
+    padding: 12px;
+    color: #161618;
+    border-radius:8px 0 8px 8px;
+    display: inline-block;
+    float: right;
+}
+
+.jewellery-left-msg {
+    clear: left;
+    background: #F0F2FF;
+    padding: 12px;
+    color: #161618;
+    border-radius:0 8px 8px 8px;
+    display: inline-block;
+    margin: 24px 0 20px;
+    max-width: 320px;
+}
+
+.jewellery-center {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    background: #393F79;
+    border-radius: 8px;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.jewellery-center p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color:#C6C6D0;
+}
+
+.jewellery-center p strong{
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
+    color: #fff;
+}
+
+.jewelery-expert .discovery-scroll {
+    padding-top: 30px;
+    max-height: 360px;
+}
+
+.up-sell .jewelery-expert-header {
+    padding: 20px 15px;
+}
+
+.up-sell .without-hover {
+    max-width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+}
+
+.up-sell-top {
+    display: flex;
+    gap:20px
+}
+
+.up-sell-top-image {
+    flex:0 0 130px;
+}
+
+.up-sell-loading {
+    width: 100%;
+}
+
+.up-sell-loading span {
+    display: block;
+    background: #E7E7E9;
+    border-radius: 8px;
+    padding: 7px;
+    margin-top: 12px;
+}
+
+.up-sell-loading .up-sell-loading-2 {
+    width: 60%;
+    background-color: #F5F5F6;
+}
+
+.up-sell-loading .up-sell-loading-3 {
+    width: 32%;
+    margin-top: 10%;
+}
+
+.up-sell-loading .up-sell-loading-4 {
+    width: 28%;
+    background-color: #F5F5F6;
+}
+
+.similar-product {
+    font-size: 14px;
+    font-weight: 600;
+    color:#161618;
+    margin-top: 7%;
+    margin-bottom: 15px;
+}
+.up-sell-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.up-sell .discovery-scroll {
+    max-height: 400px;
+}
+
+.up-sell {
+    padding: 60px 16px 0;
+}
